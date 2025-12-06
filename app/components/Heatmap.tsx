@@ -21,7 +21,7 @@ export default function Heatmap() {
     const dates = generateDates();
 
   return (
-    <div className="w-[200px] grid grid-rows-7 grid-flow-col gap-1">
+    <div className="w-full grid grid-rows-7 grid-flow-col gap-1">
       { dates.map((item, index) => {
 
         const weekDay = new Date(item.date).getDay()
