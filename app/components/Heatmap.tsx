@@ -34,7 +34,7 @@ export default function Heatmap() {
                 gridRowStart: isFirstWeekDay ? cssAjustement : 'auto'
             }}>
                 { item.isCompleted === undefined ? 
-                        <div className="w-2 h-2 bg-zinc-400"></div>
+                        <div className="w-2 h-2 bg-white"></div>
                     : item.isCompleted === false ?
                         <div className="w-2 h-2 bg-red-300">x</div>
                     :   <div className="w-2 h-2 bg-green-300"></div>
