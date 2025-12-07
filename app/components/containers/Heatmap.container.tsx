@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Heatmap from "../Heatmap";
 import IconButton from "../ui/IconButton";
+import type { DateItem } from "../Heatmap";
 
 export default function HeatmapContainer() {
     const todayString = new Date().toISOString().split('T')[0];
@@ -25,11 +26,9 @@ export default function HeatmapContainer() {
         return dates;
     }
 
-    const [dates, setDates] = useState(() => generateDates())
+    const [dates, setDates] = useState<DateItem[]>(() => generateDates())
 
     const handleClick = () => {
-        // Je dois modifier dans le tableau dates la propriété isCompleted de la date d'aujourd'hui et vérifier si c'est bien la date d'aujourd'hui
-        // Pour modifier un tableau Map
         setDates(prev => prev.map((item => {
             if (item.date === todayString) {
                 return {...item, isCompleted: true}
@@ -40,7 +39,7 @@ export default function HeatmapContainer() {
     }
 
     return (
-        <div className="max-w-3xl bg-gray-800 p-4 rounded-2xl">
+        <div className="max-w-6xl bg-gray-800 p-4 rounded-2xl">
             <div className="flex items-center">
                 <IconButton onClick={handleClick}/>
                 <Heatmap dates={dates}/>

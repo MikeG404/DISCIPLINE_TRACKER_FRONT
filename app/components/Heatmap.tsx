@@ -1,4 +1,15 @@
-export default function Heatmap({dates}) {
+export type DateItem = {
+  date: string, 
+  isCompleted: undefined | boolean
+}
+
+type HeatmapProps = {
+  dates: DateItem[]
+}
+
+export default function Heatmap({dates}: HeatmapProps) {
+
+  const squaresSizeStyles = "w-4 h-4";
 
   return (
     <div className="w-full grid grid-rows-7 grid-flow-col gap-1">
@@ -14,11 +25,10 @@ export default function Heatmap({dates}) {
                 gridRowStart: isFirstWeekDay ? cssAjustement : 'auto'
             }}>
                 { item.isCompleted === undefined ? 
-                        <div className="w-2 h-2 bg-white"></div>
+                        <div className={`${squaresSizeStyles} bg-zinc-400`}></div>
                     : item.isCompleted === false ?
-                        <div className="w-2 h-2 bg-red-300">x</div>
-                    :   <div className="w-2 h-2 bg-green-300"></div>
-                
+                        <div className={`${squaresSizeStyles} bg-red-400`}>x</div>
+                    :   <div className={`${squaresSizeStyles} bg-green-400`}></div>      
                 }
             </div>
         )

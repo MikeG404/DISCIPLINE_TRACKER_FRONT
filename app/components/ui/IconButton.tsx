@@ -2,7 +2,11 @@
 
 import { Code } from "lucide-react";
 
-export default function Button({onClick}) {
+type ButtonProps = {
+    onClick: () => void;
+}
+
+export default function Button({onClick}: ButtonProps) {
 
     return (
         <div className="p-4">
