@@ -9,7 +9,7 @@ export default function HeatmapContainer() {
     const todayString = new Date().toISOString().split('T')[0];
 
     const generateDates = (daysBack = 365) => {
-        const dates = [];
+        const dates: DateItem[] = [];
         const today = new Date();
 
         for (let i = daysBack; i >= 0; i--) {
