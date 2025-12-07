@@ -31,7 +31,8 @@ export default function HeatmapContainer() {
     const handleClick = () => {
         setDates(prev => prev.map((item => {
             if (item.date === todayString) {
-                return {...item, isCompleted: true}
+                const value = item.isCompleted === undefined ? true : item.isCompleted === true ? false : undefined;
+                return {...item, isCompleted: value}
             }
 
             return item
