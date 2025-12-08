@@ -23,6 +23,7 @@ export default function HeatmapContainer() {
             })
         }
 
+
         return dates;
     }
 
@@ -40,7 +41,7 @@ export default function HeatmapContainer() {
     }
 
     return (
-        <div className="max-w-6xl bg-gray-800 p-4 rounded-2xl">
+        <div className="w-fu bg-gray-800 p-4 rounded-2xl">
             <div className="flex items-center">
                 <IconButton onClick={handleClick}/>
                 <Heatmap dates={dates}/>

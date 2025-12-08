@@ -3,8 +3,8 @@ import Heatmap from "../components/Heatmap";
 
 export default function Dashboard() {
   return (
-    <main>
+    <main className="p-4">
       <HeatmapContainer />
-    </main>
+   </main>
   );
 }
