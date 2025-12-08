@@ -31,7 +31,7 @@ export default function Heatmap({ dates }) {
                 { item.isCompleted === undefined ? 
                         <div className={`${squaresSizeStyles} bg-zinc-400`}></div>
                     : item.isCompleted === false ?
-                        <div className={`${squaresSizeStyles} bg-red-400 text-white flex items-center justify-center text-[8px]`}>x</div>
+                        <div className={`${squaresSizeStyles} bg-red-400`}></div>
                     :   <div className={`${squaresSizeStyles} bg-green-400`}></div>      
                 }
             </div>

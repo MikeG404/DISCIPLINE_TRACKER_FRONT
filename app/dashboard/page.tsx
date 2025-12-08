@@ -1,7 +1,6 @@
 'use client'
 
 import HeatmapContainer from "../components/containers/Heatmap.container";
-import Heatmap from "../components/Heatmap";
 import IconButton from "../components/ui/IconButton";
 
 export default function Dashboard() {
