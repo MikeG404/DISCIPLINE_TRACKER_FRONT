@@ -42,8 +42,11 @@ export default function HeatmapContainer() {
 
     return (
         <div className="w-fu bg-gray-800 p-4 rounded-2xl">
-            <div className="flex items-center">
+            <div className="flex pb-2 items-center justify-between">
+                <h2 className="text-white font-semibold">Code</h2>
                 <IconButton onClick={handleClick}/>
+            </div>
+            <div>
                 <Heatmap dates={dates}/>
             </div>
         </div>

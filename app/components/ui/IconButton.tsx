@@ -9,7 +9,7 @@ type ButtonProps = {
 export default function Button({onClick}: ButtonProps) {
 
     return (
-        <div className="pr-4">
+        <div className="flex items-center">
             <button 
                 type="button" 
                 className="cursor-pointer" 
